@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stickerpack-practice/static/css/main.f855e6bc.css",
+    "main.js": "/stickerpack-practice/static/js/main.aae34955.js",
+    "index.html": "/stickerpack-practice/index.html",
+    "main.f855e6bc.css.map": "/stickerpack-practice/static/css/main.f855e6bc.css.map",
+    "main.aae34955.js.map": "/stickerpack-practice/static/js/main.aae34955.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.aae34955.js"
+  ]
+}
