@@ -4,7 +4,7 @@ import { StickerImg } from "./Sticker.styled.js";
 
 export class Sticker extends Component {
   render() {
-    const { img, label, onClick } = this.props;
-    return <StickerImg src={img} alt={label} onClick={() => onClick(label)} />;
+    const { img, label, onClick, isSelected } = this.props;
+    return <StickerImg src={img} alt={label} onClick={() => onClick(label) } isSelected={isSelected}/>;
   }
 }

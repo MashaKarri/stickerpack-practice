@@ -6,6 +6,8 @@ import { List } from "./StickerList.styled.js";
 
 export class StickerList extends Component {
   render() {
+    const { selectedLabel, onSelect } = this.props;
+
     return (
       <List>
         {stickers.map((sticker, index) => (
@@ -13,7 +15,8 @@ export class StickerList extends Component {
             key={index}
             img={sticker.img}
             label={sticker.label}
-            onClick={this.props.onSelect}
+            onClick={onSelect}
+            isSelected={selectedLabel === sticker.label}
           />
         ))}
       </List>

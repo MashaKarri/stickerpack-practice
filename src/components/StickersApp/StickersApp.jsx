@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { StickerList } from "../StickerList/StickerList.jsx";
 import { Choice } from "../Choice/Choice.jsx";
+import stickers from "../../data/stickers.json";
 
 export class StickersApp extends Component {
   state = {
@@ -14,11 +15,20 @@ export class StickersApp extends Component {
   };
 
   render() {
+    const selectedStickerObj = stickers.find(
+      (sticker) => sticker.label === this.state.selectedSticker,
+    );
     return (
-      <div>
-        <Choice label={this.state.selectedSticker} />
-        <StickerList onSelect={this.handleSelect} />
-      </div>
+      <>
+        <Choice
+          label={this.state.selectedSticker}
+          img={selectedStickerObj ? selectedStickerObj.img : null}
+        />
+        <StickerList
+          onSelect={this.handleSelect}
+          selectedLabel={this.state.selectedSticker}
+        />
+      </>
     );
   }
 }

@@ -1,18 +1,17 @@
 import { Component } from "react";
 
-import { ChoiceWrapper, ChoiceText } from "./Choice.styled.js";
+import { ChoiceWrapper, ChoiceText, ChoiceImg } from "./Choice.styled.js";
 
 export class Choice extends Component {
   render() {
-    const { label } = this.props;
+    const { label, img } = this.props;
 
     return (
       <ChoiceWrapper>
-        {label ? (
-          <ChoiceText>You selected: {label}</ChoiceText>
-        ) : (
-          <ChoiceText>Choose any sticker</ChoiceText>
-        )}
+        <ChoiceText>
+          {label ? `You selected: ${label}` : "Choose any sticker"}
+        </ChoiceText>
+        {img && <ChoiceImg src={img} aria-colcount={label} />}
       </ChoiceWrapper>
     );
   }
